@@ -5,25 +5,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tutustu Aava Veneiden myynnissä oleviin veneisiin.">
+    <meta name="description" content="Tutustu Terhi 475 Twinin, Aava 520 Sportin ja Aava 610 Cruiserin kuviin, hintoihin ja tietoihin. Kysy lisää Aava Veneiltä.">
     <title>Myytävät veneet | Aava Veneet</title>
+
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/boat1.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
-<body>
+<body class="boat-detail-page">
+    <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
 
-    <!-- Sivuston yhteinen header -->
+    <!-- Yhteinen header -->
     <header class="site-header">
         <a class="brand" href="index.html">Aava Veneet</a>
 
         <nav class="site-nav" aria-label="Päänavigaatio">
             <a href="index.html#veneet">Veneet</a>
-            <a href="index.html#palvelut">Palvelut</a>
-            <a href="index.html#yhteystiedot">Yhteystiedot</a>
+            <a href="boat1.html" aria-current="page">Veneiden tiedot</a>
+            <a href="contact.html">Ota yhteyttä</a>
         </nav>
     </header>
 
-    <main class="boat-page">
+    <main id="sisalto" class="boat-page" tabindex="-1">
 
         <h1>Myynnissä olevat veneet</h1>
 
@@ -32,12 +36,18 @@
             sopiva vene. Kysy rohkeasti lisätietoja!
         </p>
 
+        <nav class="boat-shortcuts" aria-label="Siirry veneen tietoihin">
+            <a href="#boat1">Terhi 475 Twin</a>
+            <a href="#boat2">Aava 520 Sport</a>
+            <a href="#boat3">Aava 610 Cruiser</a>
+        </nav>
+
         <!-- VENE 1: TERHI 475 TWIN -->
 
-        <article id="boat1" class="boat-listing">
+        <article id="boat1" class="boat-listing" aria-labelledby="boat1-title">
 
             <header class="boat-header">
-                <h2>Terhi 475 Twin</h2>
+                <h2 id="boat1-title">Terhi 475 Twin</h2>
                 <p>Monikäyttöinen avovene Honda 50 hv -moottorilla</p>
                 <p class="boat-price"><strong>6 490 €</strong></p>
             </header>
@@ -47,27 +57,36 @@
 
                 <div class="boat-gallery">
 
-                    <a href="images/venekuva1.jpg" target="_blank" rel="noopener">
+                    <a href="images/venekuva1.jpg"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Avaa Terhin takakuva suurempana">
                         <img src="images/venekuva1.jpg"
-                             alt="Terhi 475 Twin takaapäin kuvattuna"
-                             width="300">
+                             width="993" height="1080"
+                             alt="Terhi 475 Twin takaapäin, Honda 50 hv -moottori">
                     </a>
 
-                    <a href="images/venekuva2.jpg" target="_blank" rel="noopener">
+                    <a href="images/venekuva2.jpg"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Avaa Terhin keulakuva suurempana">
                         <img src="images/venekuva2.jpg"
-                             alt="Terhi 475 Twin laiturissa"
-                             width="300">
+                             width="1280" height="1080"
+                             alt="Terhi 475 Twin laiturissa keulasta kuvattuna">
                     </a>
 
-                    <a href="images/venekuva3.jpg" target="_blank" rel="noopener">
+                    <a href="images/venekuva3.jpg"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Avaa Terhin sivukuva suurempana">
                         <img src="images/venekuva3.jpg"
-                             alt="Terhi 475 Twin sivulta kuvattuna"
-                             width="300">
+                             width="3303" height="2343"
+                             alt="Terhi 475 Twin sivulta kuvattuna trailerilla">
                     </a>
 
                 </div>
 
-                <p>Klikkaa kuvaa nähdäksesi sen suurempana.</p>
+                <p>Avaa kuva suurempana valitsemalla se. Kuva avautuu uuteen välilehteen.</p>
             </section>
 
             <section class="boat-description">
@@ -100,7 +119,11 @@
 
             <section class="boat-contact">
                 <h3>Kiinnostuitko tästä veneestä?</h3>
-                <p>Ota yhteyttä ja kysy lisätietoja tai sovi esittelystä.</p>
+
+                <p>
+                    Ota yhteyttä ja kysy lisätietoja
+                    tai sovi veneen esittelystä.
+                </p>
 
                 <a href="contact.html?boat=boat1" class="button">
                     Kysy tästä veneestä
@@ -113,10 +136,10 @@
 
         <!-- VENE 2: AAVA 520 SPORT -->
 
-        <article id="boat2" class="boat-listing">
+        <article id="boat2" class="boat-listing" aria-labelledby="boat2-title">
 
             <header class="boat-header">
-                <h2>Aava 520 Sport</h2>
+                <h2 id="boat2-title">Aava 520 Sport</h2>
                 <p>Tyylikäs ja käytännöllinen vapaa-ajan moottorivene</p>
                 <p class="boat-price"><strong>12 900 €</strong></p>
             </header>
@@ -126,21 +149,27 @@
 
                 <div class="boat-gallery">
 
-                    <a href="images/venekuva4.png" target="_blank" rel="noopener">
+                    <a href="images/venekuva4.png"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Avaa Aava 520 Sportin ensimmäinen kuva">
                         <img src="images/venekuva4.png"
-                             alt="Aava 520 Sport sivulta kuvattuna laiturissa"
-                             width="300">
+                             loading="lazy" decoding="async"
+                             alt="Aava 520 Sport sivulta kuvattuna laiturissa">
                     </a>
 
-                    <a href="images/venekuva5.png" target="_blank" rel="noopener">
+                    <a href="images/venekuva5.png"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Avaa Aava 520 Sportin toinen kuva">
                         <img src="images/venekuva5.png"
-                             alt="Aava 520 Sport toisesta kuvakulmasta"
-                             width="300">
+                             loading="lazy" decoding="async"
+                             alt="Aava 520 Sport toisesta kuvakulmasta">
                     </a>
 
                 </div>
 
-                <p>Klikkaa kuvaa nähdäksesi sen suurempana.</p>
+                <p>Avaa kuva suurempana valitsemalla se. Kuva avautuu uuteen välilehteen.</p>
             </section>
 
             <section class="boat-description">
@@ -155,9 +184,8 @@
 
                 <p>
                     Veneessä on mukavat istuinpaikat,
-                    suojaava tuulilasi sekä tehokas 60 hv
-                    perämoottori. Avara keulaosa tarjoaa
-                    lisää tilaa matkustajille.
+                    suojaava tuulilasi sekä 60 hv perämoottori.
+                    Avara keulaosa tarjoaa lisää tilaa matkustajille.
                 </p>
 
                 <p>
@@ -181,7 +209,11 @@
 
             <section class="boat-contact">
                 <h3>Kiinnostuitko tästä veneestä?</h3>
-                <p>Ota yhteyttä ja kysy lisätietoja tai sovi esittelystä.</p>
+
+                <p>
+                    Ota yhteyttä ja kysy lisätietoja
+                    tai sovi veneen esittelystä.
+                </p>
 
                 <a href="contact.html?boat=boat2" class="button">
                     Kysy tästä veneestä
@@ -194,10 +226,10 @@
 
         <!-- VENE 3: AAVA 610 CRUISER -->
 
-        <article id="boat3" class="boat-listing">
+        <article id="boat3" class="boat-listing" aria-labelledby="boat3-title">
 
             <header class="boat-header">
-                <h2>Aava 610 Cruiser</h2>
+                <h2 id="boat3-title">Aava 610 Cruiser</h2>
                 <p>Tilava matkavene mukavaan kesäveneilyyn</p>
                 <p class="boat-price"><strong>24 900 €</strong></p>
             </header>
@@ -207,27 +239,36 @@
 
                 <div class="boat-gallery">
 
-                    <a href="images/venekuva6.png" target="_blank" rel="noopener">
+                    <a href="images/venekuva6.png"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Avaa Aava 610 Cruiserin ensimmäinen kuva">
                         <img src="images/venekuva6.png"
-                             alt="Aava 610 Cruiser laiturissa"
-                             width="300">
+                             loading="lazy" decoding="async"
+                             alt="Aava 610 Cruiser laiturissa">
                     </a>
 
-                    <a href="images/venekuva7.png" target="_blank" rel="noopener">
+                    <a href="images/venekuva7.png"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Avaa Aava 610 Cruiserin toinen kuva">
                         <img src="images/venekuva7.png"
-                             alt="Aava 610 Cruiser sivulta kuvattuna"
-                             width="300">
+                             loading="lazy" decoding="async"
+                             alt="Aava 610 Cruiser sivulta kuvattuna">
                     </a>
 
-                    <a href="images/venekuva8.png" target="_blank" rel="noopener">
+                    <a href="images/venekuva8.png"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Avaa Aava 610 Cruiserin kolmas kuva">
                         <img src="images/venekuva8.png"
-                             alt="Aava 610 Cruiser takaapäin kuvattuna"
-                             width="300">
+                             loading="lazy" decoding="async"
+                             alt="Aava 610 Cruiser takaapäin kuvattuna">
                     </a>
 
                 </div>
 
-                <p>Klikkaa kuvaa nähdäksesi sen suurempana.</p>
+                <p>Avaa kuva suurempana valitsemalla se. Kuva avautuu uuteen välilehteen.</p>
             </section>
 
             <section class="boat-description">
@@ -243,7 +284,7 @@
                     Veneessä on suojaava tuulilasi, katettu
                     ohjaamo sekä mukavat istuintilat.
                     Tehokas 115 hv perämoottori tarjoaa
-                    riittävästi suorituskykyä monipuoliseen
+                    suorituskykyä monipuoliseen
                     vapaa-ajan veneilyyn.
                 </p>
 
@@ -269,7 +310,11 @@
 
             <section class="boat-contact">
                 <h3>Kiinnostuitko tästä veneestä?</h3>
-                <p>Ota yhteyttä ja kysy lisätietoja tai sovi esittelystä.</p>
+
+                <p>
+                    Ota yhteyttä ja kysy lisätietoja
+                    tai sovi veneen esittelystä.
+                </p>
 
                 <a href="contact.html?boat=boat3" class="button">
                     Kysy tästä veneestä
