@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yhteystiedot</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">Aava Veneet</a>
+        <nav class="site-nav" aria-label="Päänavigaatio">
+            <a href="#veneet">Veneet</a>
+            <a href="#palvelut">Palvelut</a>
+            <a href="#yhteystiedot">Yhteystiedot</a>
+        </nav>
+        <h3>Yhteystiedot</h3>
+        <p>Täytä alla oleva lomake ja lähetä meille viestisi.</p>
+    </header>
+
+    <main class="site-main">
+        <section class="contact" id="yhteystiedot">
+            <h3>Ota yhteyttä</h3>
+
+            <form class="contact-card" action="https://httpbin.org/post" method="post">
+
+                <div class="form-group">
+                    <label for="name">Nimi (pakollinen)</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required minlength="2" maxlength="30">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Sähköpostiosoite (pakollinen)</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required maxlength="40">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Puhelinnumero (valinnainen)</label>
+                    <p id="phone-help">
+                        Esimerkki: +358401234567 / 0401234567.
+                    </p>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[+]?[0-9]{7,15}"
+                        aria-describedby="phone-help">
+                </div>
+
+                <div class="form-group">
+                <label for="veneet">Veneet (pakollinen)</label>
+                <select id="veneet" name="veneet" required>
+                    <option value="">Valitse vene</option>
+                    <option value="vene1">Terhi 475 Twin</option>
+                    <option value="vene2">Aava 520 Sport</option>
+                    <option value="vene3">Aava 610 Cruiser</option>
+                </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Viesti (pakollinen)</label>
+                    <textarea id="message" name="message" required minlength="10" maxlength="500">
+                </textarea>
+                </div>
+
+                <button type="submit">Lähetä</button>
+            </form>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
