@@ -46,6 +46,149 @@ body {
 	text-align: center;
 }
 
+.esittely {
+	position: relative;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: clamp(72px, 10vw, 120px) 24px clamp(36px, 5vw, 64px);
+	text-align: center;
+}
+
+.esittely::before {
+	content: "AAVA VENEET";
+	display: block;
+	margin-bottom: 24px;
+	color: #0e6670;
+	font-size: 0.75rem;
+	font-weight: bold;
+	letter-spacing: 0.18em;
+}
+
+.esittely h1 {
+	max-width: 700px;
+	margin: 0 auto 28px;
+	font-size: clamp(3rem, 8vw, 6.5rem);
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+.esittely .intro {
+	max-width: 560px;
+	margin: 0 auto;
+	color: #557078;
+	font-size: clamp(1.05rem, 2vw, 1.3rem);
+	line-height: 1.8;
+}
+
+.venemallisto {
+	max-width: 1200px;
+	margin: clamp(48px, 7vw, 80px) auto 0;
+	padding: 0 24px;
+	text-align: left;
+}
+
+.section-heading {
+	margin-bottom: 32px;
+}
+
+.eyebrow {
+	margin: 0 0 10px;
+	color: #0e6670;
+	font-size: 0.75rem;
+	font-weight: bold;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+}
+
+.section-heading h2 {
+	margin: 0;
+	font-size: clamp(2rem, 4vw, 3.2rem);
+	line-height: 1.1;
+}
+
+.veneet-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
+}
+
+.vene-kortti {
+	overflow: hidden;
+	border: 1px solid #d5e1df;
+	border-radius: 8px;
+	background: #ffffff;
+	box-shadow: 0 14px 35px rgba(23, 54, 66, 0.08);
+}
+
+.vene-kortti img {
+	display: block;
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+}
+
+.vene-kortti__sisalto {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 20px;
+}
+
+.vene-kortti h3 {
+	margin: 0;
+	font-size: 1.05rem;
+	line-height: 1.3;
+}
+
+.hinta {
+	flex-shrink: 0;
+	margin: 0;
+	color: #0e6670;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.vene-kortti-nappi {
+	display: inline-block;
+	margin-top: 16px;
+	padding: 10px 14px;
+	border-radius: 4px;
+	background: #0e6670;
+	color: #ffffff;
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.vene-kortti-nappi:hover {
+	background: #173642;
+}
+
+.site-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin-top: 72px;
+	padding: 22px 8%;
+	border-top: 1px solid #d5e1df;
+	color: #557078;
+	font-size: 0.9rem;
+}
+
+.site-footer p {
+	margin: 0;
+}
+
+.site-footer a {
+	color: #557078;
+	text-decoration: none;
+}
+
+.site-footer a:hover {
+	color: #0e6670;
+}
 h1 {
 	margin: 0 0 20px;
 	font-size: clamp(2.5rem, 7vw, 4.5rem);
@@ -74,5 +217,24 @@ h1 {
 
 	.hero {
 		padding: 90px 24px;
+	}
+
+	.esittely {
+		padding: 64px 24px 36px;
+	}
+
+	.veneet-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.vene-kortti img {
+		height: 240px;
+	}
+
+	.site-footer {
+		align-items: flex-start;
+		flex-direction: column;
+		margin-top: 52px;
+		padding: 20px 24px;
 	}
 }
