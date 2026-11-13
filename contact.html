@@ -8,21 +8,29 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body>
-    <header class="site-header">
+<body class="contact-page">
+    <header class="site-header contact-header">
         <a class="brand" href="index.html">Aava Veneet</a>
         <nav class="site-nav" aria-label="Päänavigaatio">
-            <a href="#veneet">Veneet</a>
-            <a href="#palvelut">Palvelut</a>
+            <a href="boat1.html">Veneet</a>
+            
             <a href="#yhteystiedot">Yhteystiedot</a>
         </nav>
-        <h3>Yhteystiedot</h3>
-        <p>Täytä alla oleva lomake ja lähetä meille viestisi.</p>
+
     </header>
 
     <main class="site-main">
+
+ <div class="contact-header__intro">
+            <h1>Yhteystiedot</h1>
+            <p>Täytä alla oleva lomake ja lähetä meille viestisi.</p>
+        </div>
+
         <section class="contact" id="yhteystiedot">
-            <h3>Ota yhteyttä</h3>
+            <div class="section-heading">
+                <p class="eyebrow">Yhteydenotto</p>
+                <h2>Ota yhteyttä</h2>
+            </div>
 
             <form class="contact-card" action="https://httpbin.org/post" method="post">
 
@@ -66,6 +74,20 @@
 
         </section>
     </main>
+
+    <script>
+        const boatValues = {
+            boat1: "vene1",
+            boat2: "vene2",
+            boat3: "vene3"
+        };
+        const selectedBoat = new URLSearchParams(window.location.search).get("boat");
+        const boatSelect = document.getElementById("veneet");
+
+        if (boatSelect && Object.hasOwn(boatValues, selectedBoat)) {
+            boatSelect.value = boatValues[selectedBoat];
+        }
+    </script>
 
 </body>
 
